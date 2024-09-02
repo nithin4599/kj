@@ -1,0 +1,1226 @@
+body {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@font-face {
+    font-family: nb;
+    src: url(./fonts/NBInternationalProBoo.woff2);
+}
+@font-face {
+    font-family: rejouice;
+    src: url(./fonts/Rejouice-Headline.ttf);
+}
+
+video::-webkit-media-controls-fullscreen-button {
+    display: none !important;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'nb';
+}
+html, body {
+    height: 100%;
+    width: 100%;
+    background: #fff;
+}
+
+#loader {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background: #000;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+#loader h3 {
+    font-size: 3vw;
+}
+
+#page1 {
+    height: 80vh;
+    width: 100%;
+    position: relative;
+    padding: 0; /* Ensure no padding is applied */
+    margin: 0; /* Reset margins */
+}
+@media (max-width: 768px) {
+    #page1 {
+        height: 40vh;
+        width: 100%;
+        padding: 0; /* Ensure no padding is applied */
+        margin: 0; /* Reset margins */
+    }
+}
+#cursor {
+    height: 3.5vw;
+    width: 3.5vw;
+    background-color: rgb(32, 57, 138);
+    border-radius: 50%;
+    position: fixed;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-50%, -50%);
+}
+#cursor h5 {
+    font-size: 1.15vw;
+    font-weight: 500;
+}
+
+/* Default styles for larger screens */
+#page1 video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+#page1-content {
+    height: 100%;
+    position: relative;
+    width: 100%;
+    color: #fff;
+    display: flex;
+    z-index: 10;
+    align-items: center;
+    flex-direction: column;
+    /* Center vertically */
+}
+
+/* Styles for phone view */
+@media (max-width: 768px) {
+    #page1 video {
+        height: 100%;
+        width: 100%;
+        object-fit: contain; /* Adjust this if you want a different fit on smaller screens */
+    }
+
+    #page1-content {
+        flex-direction: column; /* Stack content vertically */
+        padding: 0; /* Reset padding */
+        text-align: center; /* Center-align text for smaller screens */
+    }
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    padding: 3vw;
+}
+nav h3 {
+    font-size: 1.4vw;
+    font-weight: 100;
+}
+nav h4 {
+    font-size: 1.4vw;
+    font-weight: 100;
+}
+
+#page1-content h1 {
+    font-family: rejouice;
+    font-size: 27vw;
+    line-height: 27vw;
+    font-weight: 100;
+}
+#page1-content span {
+    font-family: rejouice;
+    display: inline-block;
+}
+
+#form-container {
+    background-color: #FAF8F3;
+    padding: 3vw;
+    max-width: 1700px;
+    margin: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading Styles */
+#form-container h1 {
+    font-family: rejouice;
+    font-size: 4vw;
+    color: #0E0E0E;
+    text-align: center;
+    margin-bottom: 2vw;
+}
+
+/* Form Group Styles */
+.form-group {
+    margin-bottom: 1.5vw;
+}
+
+.form-group label {
+    font-size: 1.2vw;
+    color: #0E0E0E;
+    display: block;
+    margin-bottom: 0.5vw;
+}
+
+/* Input, Checkbox, and Button Styles */
+.form-control,
+.form-check-input,
+.btn {
+    border-radius: 0;
+    font-size: 1.1vw;
+    padding: 1vw;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Button Specific Styles */
+.btn {
+    background-color: rgb(32, 57, 138);
+    color: #fff;
+    font-family: nb;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    margin-top: 1.5vw;
+}
+
+.btn:hover {
+    background-color: rgb(32, 57, 138);
+}
+
+/* Layout Styles */
+#content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#left-content {
+    width: 45%;
+    padding-right: 2vw;
+    font-size: 1.1vw;
+}
+
+#left-content h2 {
+    font-family: rejouice;
+    font-size: 2vw;
+    color: #0E0E0E;
+    margin-bottom: 1vw;
+}
+
+#left-content p {
+    font-family: nb;
+    line-height: 1.5;
+    color: #0E0E0E;
+}
+
+#right-form {
+    width: 50%;
+    background-color: #d0d0d0;
+    padding: 2vw;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+#left-content {
+    width: 45%;
+    padding-right: 2vw;
+    font-size: 1.1vw;
+    line-height: 1.6;
+}
+
+#left-content h2 {
+    font-family: rejouice;
+    font-size: 2vw;
+    color: #0E0E0E;
+    margin-bottom: 1.5vw;
+}
+
+#left-content h3 {
+    font-family: nb;
+    font-size: 1.6vw;
+    color: #0E0E0E;
+    margin-bottom: 1vw;
+}
+
+#left-content p {
+    font-family: nb;
+    margin-bottom: 1.2vw;
+    color: #0E0E0E;
+}
+
+#left-content p:last-of-type {
+    margin-bottom: 0;
+}
+
+/* Input Alignment Fix */
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 1vw;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1.1vw;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+/* Responsive Styles for Phone View */
+@media (max-width: 768px) {
+    /* Adjust container padding and width */
+    #form-container {
+        padding: 5vw;
+        max-width: 95%;
+    }
+
+    /* Adjust heading font size */
+    #form-container h1 {
+        font-size: 6vw;
+        margin-bottom: 4vw;
+    }
+
+    /* Adjust form group margins and font sizes */
+    .form-group {
+        margin-bottom: 3vw;
+    }
+
+    .form-group label {
+        font-size: 3vw;
+        margin-bottom: 1.5vw;
+    }
+
+    .form-control,
+    .form-check-input,
+    .btn {
+        font-size: 3vw;
+        padding: 4vw;
+    }
+
+    /* Adjust layout for phone view */
+    #content-wrapper {
+        display: block;
+    }
+
+    #left-content, 
+    #right-form {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    #left-content h2, 
+    #left-content h3 {
+        font-size: 4vw;
+    }
+
+    #left-content p {
+        font-size: 3vw;
+        margin-bottom: 2vw;
+    }
+
+    /* Button adjustments */
+    .btn {
+        margin-top: 3vw;
+    }
+
+    /* Increase input box height and reduce width */
+    .form-control {
+        font-size: 5vw;
+        padding: 6vw 4vw; /* Increased height (padding-top/bottom) */
+        width: 80%; /* Reduced width */
+    }
+}
+
+
+
+/* Base Styles */
+#page2 {
+    height: 108vh;
+    width: 100%;
+    background: #FAF8F3;
+    color: #0E0E0E;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navigation Bar */
+#page2>#nav {
+    display: flex;
+    padding: 2.8vw;
+    padding-bottom: 1vw;
+    height: auto; /* Adjust height */
+    width: 100%;
+    align-items: center; /* Center align items */
+    justify-content: space-between;
+}
+
+hr {
+    width: 94.4vw;
+    margin: 0 auto;
+    justify-content: center;
+}
+/* Ensure that the bullets are aligned to the left */
+ul {
+    list-style-position: inside; /* Ensures bullets are inside the padding area */
+    padding-left: 0; /* Remove default padding */
+    margin-left: 0; /* Remove default margin */
+}
+
+ul li {
+    padding-left: 1.5vw; /* Add padding for better readability */
+    text-align: left; /* Ensure text is aligned to the left */
+}
+
+/* Navigation Elements */
+#page2>#nav>.elem h1 {
+    align-items: baseline;
+    font-family: nb;
+    font-size: 1.67vw;
+    font-weight: 100;
+}
+
+/* Heading Section */
+#page2>.heading {
+    padding: 2.8vw;
+}
+
+#page2>.heading h1 {
+    font-size: 4.2vw;
+    font-weight: 500;
+}
+
+/* Responsive Styles for Phone View */
+@media (max-width: 768px) {
+    #page2>#nav {
+        flex-direction: column;
+        padding: 4vw 2vw;
+        align-items: center;
+        height: auto; /* Adjust height */
+        margin-top: 10px;
+    }
+
+    #page2>#nav>.elem h1 {
+        font-size: 5vw; /* Increase font size for readability */
+        text-align: center;
+        margin-bottom: 2vw;
+    }
+
+    hr {
+        width: 90vw; /* Adjust width for smaller screens */
+    }
+
+    #page2>.heading {
+        padding: 4vw 2vw; /* Adjust padding for smaller screens */
+        text-align: center; /* Center text for smaller screens */
+    }
+
+    #page2>.heading h1 {
+        font-size: 6vw; /* Increase font size for better visibility */
+    }
+}
+
+#space {
+    margin-left: 8vw;
+}
+/* Base Styles for Page 3 */
+/* Base Styles for Page 3 */
+/* Base Styles for Page 3 */
+/* Base Styles for Page 3 */
+/* Base Styles for Page 3 */
+#page3 {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    padding: 6vw 4vw; /* Increased top padding to avoid collision */
+   /* Doubled margin to ensure ample space between #page3 and #page4 */
+}
+
+#page3-top {
+    text-align: center;
+}
+
+#page3-top h4 {
+    margin-bottom: 2vw;
+    font-size: 2vw;
+    font-weight: 500;
+}
+
+#page3-top span {
+    font-size: 1.5vw;
+    background-color: #000;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 10px;
+}
+
+#page3-top h2 {
+    font-size: 5vw;
+    font-weight: 500;
+}
+
+#page3-elements {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 2vw; /* Add margin-top to separate from top elements */
+}
+
+#page3-elements .box {
+    flex: 1 1 30%;
+    max-width: 32%;
+    height: 75vh; /* Increased height for better visibility */
+    position: relative;
+    margin-bottom: 4vw; /* Increased margin to separate boxes */
+}
+
+#page3-elements .box video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+#page3-elements .box img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    transition: all linear 0.7s;
+}
+
+#page3-elements > .box:hover img {
+    opacity: 0;
+}
+
+/* Responsive Styles for Phone View */
+/* Media query for small phones (up to 480px) */
+/* Media query for larger phones (up to 768px) */
+/* Media query for larger phones (up to 768px) */
+@media (max-width: 768px) {
+    #page3 {
+        padding: 8vw 4vw; /* Maintain increased top padding for smaller screens */
+        margin-bottom: 300px; /* Ensure ample space between sections */
+        margin-top: -55vh; /* Adjusted margin for better spacing */
+    }
+
+    #page3-top h4 {
+        font-size: 2.5vw; /* Responsive font size for larger phones */
+    }
+
+    #page3-top span {
+        font-size: 1.8vw; /* Responsive font size for larger phones */
+    }
+
+    #page3-top h2 {
+        font-size: 6vw; /* Responsive font size for larger phones */
+    }
+
+    #page3-elements {
+        flex-direction: column; /* Stack items vertically */
+        flex-wrap: nowrap; /* Prevent wrapping to ensure items stack in a single column */
+    }
+
+    #page3-elements .box {
+        flex: 1 1 auto; /* Allow boxes to take up available space */
+        max-width: 100%; /* Ensure each box takes up full width */
+        width: 768px; /* Adjust width for larger phones */
+        height: 30vh; /* Adjust height for better visibility */
+        margin-bottom: 8vw; /* Increased margin between boxes */
+    }
+}
+
+/* Media query for smaller phones (up to 480px) */
+
+
+/* Base Styles for Page 4 */
+#page4 {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0; /* Reset margin to avoid overlap */
+}
+
+/* Add additional margin to separate from the previous section */
+#page4::before {
+    content: "";
+    display: block;
+    height: 300px; /* Doubled height for more space */
+    width: 100%;
+}
+
+#page4 a {
+    color: #fff;
+    padding: 5vw;
+    font-size: larger;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+#page4-top {
+    position: absolute;
+    z-index: 2;
+}
+
+#page4 video {
+    width: 50%;
+}
+
+#page4 svg {
+    position: absolute;
+    height: 65%;
+}
+
+/* Base Styles for Page 5 */
+#page5 {
+    height: 100vh;
+    width: 100%;
+}
+
+#page5 h1 {
+    font-size: 10vw;
+    font-family: rejouice;
+    font-weight: 100;
+    border-bottom: 1px solid #000;
+    width: 96%;
+    margin-left: 2%;
+    margin-bottom: -3vw;
+}
+
+#page5 #swiperdiv {
+    position: relative;
+    height: 100vh;
+}
+
+.swiper {
+    width: 100vw;
+}
+
+.swiper-slide img {
+    width: 100%;
+}
+
+.swiper-wrapper {
+    align-items: baseline;
+    position: absolute;
+    z-index: 10;
+}
+
+
+
+/* <--cads --> */
+
+/* Container Styles */
+
+
+
+
+
+/* Container Styles */
+/* Container Styles */
+
+
+
+
+
+
+
+
+
+
+
+/* Curriculum Section Styles */
+/* Curriculum Section Styles */#curriculum {
+    background-color: #f3f6fa;
+    padding: 4vw 2vw;
+    margin: auto;
+    max-width: 1700px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+#curriculum h2 {
+    font-family: rejouice;
+    font-size: 2.5vw; /* Reduced title size */
+    color: #0E0E0E;
+    text-align: center;
+    margin-bottom: 3vw;
+}
+
+/* Course Buttons */
+.course-buttons {
+    text-align: center;
+    margin-bottom: 3vw;
+}
+
+.course-btn {
+    background-color: rgb(32, 57, 138);
+    color: #fff;
+    font-family: nb;
+    font-size: 1.5vw;
+    padding: 1vw 2vw;
+    margin: 0 1vw;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.course-btn:hover {
+    background-color: rgb(32, 57, 138);
+}
+
+/* Table Layout */
+#curriculum-table {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns layout */
+    gap: 2vw;
+}
+
+/* Weeks Container */
+.weeks-container {
+    background-color: #d3e1f3; /* Lighter background color */
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 2vw;
+    margin-bottom: 2vw;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.weeks-container:hover {
+    background-color: #aeb6f5; /* Slightly darker shade on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Increased shadow for depth effect */
+}
+
+/* Week Styles */
+.week {
+    margin-bottom: 2vw;
+}
+
+.week h3 {
+    font-family: rejouice;
+    font-size: 20; /* Adjusted font size for week titles */
+    color: rgb(32, 57, 138);
+    margin-bottom: 1vw;
+}
+
+.week ul {
+    list-style-type: disc;
+    padding-left: 1.5vw;
+}
+
+.week ul li {
+    font-family: nb;
+    font-size: 1.3vw; /* Adjusted font size */
+    color: #0E0E0E;
+    margin-bottom: 0.5vw;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    #curriculum {
+        padding: 6vw 4vw;
+    }
+
+    #curriculum h2 {
+        font-size: 3vw; /* Adjusted for smaller screens */
+    }
+
+    .course-btn {
+        font-size: 2vw;
+        padding: 2vw 4vw;
+    }
+
+    .weeks-container {
+        padding: 4vw;
+    }
+
+    .week h3 {
+        font-size: 2.5vw;
+    }
+
+    .week ul li {
+        font-size: 1.5vw;
+    }
+}
+
+/* Phone View Styles */
+@media (max-width: 768px) {
+    #curriculum {
+        padding: 8vw 4vw;
+        margin-top: -250px
+    }
+
+    #curriculum h2 {
+        font-size: 5vw; /* Further adjust for smaller screens */
+    }
+
+    .course-btn {
+        font-size: 3.5vw;
+        padding: 3vw 5vw;
+        margin: 2vw 0; /* Reduce margin between buttons */
+    }
+
+    #curriculum-table {
+        grid-template-columns: 1fr; /* Change to a single column layout */
+        gap: 4vw; /* Increase gap between sections */
+    }
+
+    .weeks-container {
+        padding: 6vw;
+    }
+
+    .week h3 {
+        font-size: 4vw;
+        margin-bottom: 2vw; /* Increase space below headings */
+    }
+
+    .week ul {
+        padding-left: 4vw; /* Increase padding for better readability */
+    }
+
+    .week ul li {
+        font-size: 2.5vw;
+        margin-bottom: 2vw; /* Increase space between list items */
+    }
+}
+/* Projects Box Styles *//* Projects Box Styles */
+.projects-box1 {
+    background-color: #fef9f4; /* Light cream background for a notice feel */
+    border: 2px solid #b5d1ff; /* Slightly thicker border with a light yellow color */
+    border-radius: 10px; /* Rounded corners for a softer look */
+    padding: 2vw; /* Padding around the text */
+    margin: 2vw 0 2vw 1vw; /* Move the box more to the left */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow for emphasis */
+    font-family: nb; /* Consistent font with the rest of the content */
+    color: #0E0E0E; /* Dark text color for readability */
+    font-size: 1.4vw; /* Slightly smaller font size */
+    max-width: 100%; /* Reduce width to make it more compact */
+    position: relative; /* Maintain positioning */
+    margin-left: -1px;
+    display: block; /* Change back to block-level element */
+}
+
+/* Remove the icon styling */
+.projects-box1::before {
+    content: none; /* Remove the icon */
+}
+
+/* Paragraph Styling */
+.projects-box1 p {
+    margin: 0; /* Remove default margin from the paragraph */
+    line-height: 1.6; /* Increase line height for better readability */
+    text-align: left; /* Align text to the left */
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .projects-box1 {
+        padding: 3vw; /* Adjust padding for smaller screens */
+        font-size: 1.8vw; /* Adjust font size for readability */
+        max-width: 90%; /* Increase width slightly on smaller screens */
+        margin-left: -1px; /* Move box slightly more to the left on smaller screens */
+
+    }
+}
+
+
+
+
+
+/* Projects Box Styles */
+.projects-box {
+    background-color: #fef9f4; /* Light cream background for a notice feel */
+    border: 2px solid #b5d1ff; /* Slightly thicker border with a light yellow color */
+    border-radius: 10px; /* Rounded corners for a softer look */
+    padding: 2vw; /* Padding around the text */
+    margin: 2vw auto; /* Centered with space above and below */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow for emphasis */
+    font-family: nb; /* Consistent font with the rest of the content */
+    color: #0E0E0E; /* Dark text color for readability */
+    font-size: 1.4vw; /* Slightly smaller font size */
+    max-width: 80%; /* Reduce width to make it more compact */
+    position: relative; /* For positioning the icon */
+}
+
+/* Add a notice icon */
+.projects-box::before {
+    content: '⚠️'; /* Example icon, you can use a different one if needed */
+    font-size: 2vw; /* Size of the icon */
+    position: absolute;
+    top: 50%;
+    left: 1vw;
+    transform: translateY(-50%); /* Center icon vertically */
+}
+
+/* Paragraph Styling */
+.projects-box p {
+    margin: 0; /* Remove default margin from the paragraph */
+    line-height: 1.6; /* Increase line height for better readability */
+    padding-left: 3vw; /* Add space for the icon */
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .projects-box {
+        padding: 3vw; /* Adjust padding for smaller screens */
+        font-size: 1.8vw; /* Adjust font size for readability */
+        max-width: 90%; /* Increase width slightly on smaller screens */
+    }
+}
+/* Add-Ons Section Styles */
+
+.add {
+    font-family: rejouice;
+    font-size: 3vw;
+    color: rgb(32, 57, 138); /* Match with the existing color scheme */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 3vw 0; /* Spacing above and below */
+    width: 100%; /* Ensure it takes up full width */
+}
+
+/* Container for Cards */
+.containercard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns layout */
+    gap: 2vw; /* Space between cards */
+    padding: 0 2vw; /* Padding around the container */
+    margin: auto;
+    max-width: 1700px;
+}
+
+/* Card Styles */
+.card {
+    background-color: #fff;
+    border: 1px solid #aaaaa8; /* Subtle border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 2vw;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    font-family: nb; /* Consistent font */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.card h2 {
+    font-family: rejouice;
+    font-size: 2vw; /* Title size */
+    color: #0E0E0E;
+    margin-bottom: 1vw;
+}
+
+.card ul {
+    list-style-type: disc;
+    padding-left: 1.5vw;
+}
+
+.card ul li {
+    font-family: nb;
+    font-size: 1.3vw; /* List item size */
+    color: #0E0E0E;
+    margin-bottom: 0.5vw;
+}
+
+/* Hover Effect */
+.card:hover {
+    transform: translateY(-10px); /* Slight lift on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Increase shadow for depth */
+    background-color: #bfbfbf34; /* Change background color on hover */
+}
+
+/* Center Card Special Styling */
+.center-card {
+    background-color: #f4f9ff; /* Light background color to highlight */
+    border: 2px solid #b5c8ff; /* Thicker border for emphasis */
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .add {
+        font-size: 4vw; /* Adjust font size for smaller screens */
+    }
+
+    .card h2 {
+        font-size: 2.5vw; /* Adjust title size */
+    }
+
+    .card ul li {
+        font-size: 1.5vw; /* Adjust list item size */
+    }
+
+    .containercard {
+        grid-template-columns: repeat(1, 1fr); /* 1 column layout for smaller screens */
+    }
+}
+
+/* Phone View Styles */
+@media (max-width: 768px) {
+    .projects-box::before {
+        font-size: 5vw; /* Larger icon for better visibility on small screens */
+        left: 2vw; /* Adjust left position for the icon */
+    }
+
+    .projects-box p {
+        padding-left: 6vw; /* Increase padding to accommodate larger icon */
+        font-size: 4vw; /* Increase font size for readability */
+    }
+
+    .add {
+        font-size: 6vw; /* Further increase font size for the title */
+        margin: 4vw 0; /* Increase spacing for better layout on small screens */
+    }
+
+    .containercard {
+        grid-template-columns: 1fr; /* Change to a single column layout */
+        gap: 5vw; /* Increase gap between cards */
+        padding: 0 5vw; /* Increase padding around the container */
+    }
+
+    .card {
+        padding: 5vw; /* Increase padding for better spacing */
+    }
+
+    .card h2 {
+        font-size: 5vw; /* Increase title size */
+    }
+
+    .card ul li {
+        font-size: 4vw; /* Increase list item size */
+        margin-bottom: 3vw; /* Increase space between list items */
+    }
+}
+
+
+
+
+
+
+
+
+/* Logos Container */
+.logos-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Default: 5 columns per row */
+    gap: 2vw; /* Space between logos */
+    padding: 2vw; /* Padding around the container */
+    margin: auto;
+    max-width: 1000px; /* Set a max width to center the container */
+}
+
+/* Individual Logo Styling */
+.logos-container a {
+    display: flex;
+    justify-content: center; /* Center the logos horizontally */
+    align-items: center; /* Center the logos vertically */
+    background-color: #fff; /* Background color for logos */
+    border: 1px solid #c9cdd1; /* Subtle border around each logo */
+    border-radius: 10px; /* Rounded corners */
+    padding: 1vw; /* Padding inside the logo container */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.logos-container a:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Logo Image Styling */
+.logos-container img {
+    max-width: 80%; /* Ensure logos fit well inside the container */
+    max-height: 80%; /* Maintain aspect ratio */
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .logos-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 logos per row on smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .logos-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 logos per row on mobile devices */
+    }
+}
+
+@media (max-width: 480px) {
+    .logos-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 logos per row on very small screens */
+        padding: 1vw; /* Adjust padding for smaller screens */
+        gap: 1vw; /* Adjust gap between logos */
+    }
+
+    .logos-container a {
+        padding: 2vw; /* Adjust padding for better tap targets */
+        border-radius: 8px; /* Adjust border radius */
+    }
+
+    .logos-container img {
+        max-width: 70%; /* Adjust logo size for very small screens */
+        max-height: 70%;
+    }
+}
+
+
+
+
+
+
+
+
+/* Simple Footer Styling */
+.footer {
+    background-color: #333; /* Dark grey background for a clean look */
+    color: #f1f1f1; /* Light grey text color for contrast */
+    padding: 2vw 3vw; /* Padding around the content */
+    text-align: left; /* Align text to the left */
+    font-family: Arial, sans-serif; /* Simple, clean font */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: auto; /* Center content horizontally */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+ 
+}
+
+.footer-left p {
+    margin: 0.5vw 0; /* Space between lines */
+    font-size: 1vw; /* Simple font size */
+    line-height: 1.6; /* Better line spacing */
+}
+
+.footer-left p a {
+    color: #f1f1f1; /* Match the text color */
+    text-decoration: none; /* Remove underline from links */
+    transition: text-decoration 0.3s ease; /* Smooth transition */
+}
+
+.footer-left p a:hover {
+    text-decoration: underline; /* Underline on hover for better UX */
+}
+
+/* Responsive Styles */
+/* Responsive Styles for Phone View */
+@media (max-width: 768px) {
+    .footer {
+        padding: 4vw 5vw; /* Increase padding on smaller screens */
+        text-align: center; /* Center text for smaller screens */
+        margin-top: 5vw; /* Add margin to push footer down */
+    }
+
+    .footer-content {
+        display: flex;
+        flex-direction: column; /* Stack content vertically */
+        align-items: center; /* Center content */
+    }
+
+    .footer-left p {
+        font-size: 4vw; /* Increase font size for readability */
+        margin: 1vw 0; /* Increase spacing between paragraphs */
+    }
+}
+
+
+
+
+/* General Styles */
+.elem.heading {
+    background-color: #FAF8F3; /* Light background color */
+    padding: 2vw;
+    border-radius: 10px; /* Soft rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    font-family: 'Arial', sans-serif; /* Simple, clean font */
+    line-height: 1.6; /* Better readability */
+    color: #333; /* Dark grey text color */
+}
+
+/* Paragraph Styles */
+.elem.heading p {
+    font-size: 1.2vw;
+    margin-bottom: 1.5vw; /* Space between paragraphs */
+}
+
+/* Strong Emphasis */
+.elem.heading p strong {
+    color: rgb(32, 57, 138); /* Highlight important text in a vibrant color */
+}
+
+/* Technology List */
+.tech-list {
+    list-style-type: disc;
+    padding-left: 2vw;
+    margin: 1vw 0;
+}
+
+.tech-list li {
+    font-size: 1.2vw;
+    margin-bottom: 0.5vw; /* Space between list items */
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .elem.heading p {
+        font-size: 1.5vw; /* Adjust font size for smaller screens */
+    }
+
+    .tech-list li {
+        font-size: 1.5vw; /* Adjust list item size */
+    }
+}
+
+
+.highlighted-text {
+    background-color: #cde4ff; /* Light yellow background color */
+    color: #043185; /* Dark yellow text color */
+    padding: 10px; /* Add padding */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1.1em; /* Slightly larger text */
+    line-height: 1.5; /* Increase line-height for readability */
+}
+.button-link {
+    display: inline-block; /* Make the link behave like a block-level element */
+    padding: 10px 20px; /* Add padding for button-like appearance */
+    font-size: 16px; /* Adjust font size */
+    color: #fff; /* Text color */
+    background-color: #007bff; /* Button background color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    text-align: center; /* Center text inside the button */
+    text-decoration: none; /* Remove underline from the link */
+    transition: background-color 0.3s; /* Smooth transition on hover */
+}
+
+.button-link:hover {
+    background-color: #0056b3; /* Darker background color on hover */
+}
+
+/* Responsive Styles for Phone View */
+@media (max-width: 768px) {
+    .button-link {
+        padding: 6px 8px; /* Adjust padding for smaller screens */
+        font-size: 5px; /* Slightly smaller font size */
+    }
+}
+

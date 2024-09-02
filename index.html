@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WingerIT</title>
+    <link rel="shortcut icon" href="images/favicon-winger (1).svg" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+  
+</head>
+<body>
+    <div id="loader">
+        <h3>Winger</h3>
+        <h3>IT</h3>
+        <h3>Solution's</h3>
+    </div>
+    <div id="main">
+        <div id="page1">
+            <div id="cursor">
+              
+            </div>
+            <video muted autoplay playsinline poster="https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+                <source src="./videos/page1.mp4" type="video/mp4">
+            </video>
+            <div id="page1-content">
+                <nav>
+                    <h3>WingerIT.</h3>
+                  
+                </nav>
+                <!-- <h1><span>r</span><span>e</span><span>j</span><span>o</span><span>u</span><span>i</span><span>c</span><span>e</span></h1> -->
+            </div>
+        </div>
+        <div id="form-container">
+            <div id="content-wrapper">
+                <div id="left-content">
+                    <h2>Internship Program from Winger IT Solutions</h2>
+                    <h3>Affiliation & Vision</h3>
+                    <p>Winger IT Solutions [Affiliated with AICTE-INDIA], believes in empowering the next generation of tech professionals.</p>
+                    
+                    <h3>Opportunities & Learning</h3>
+                    <p>We offer a dynamic internship program that gives students the chance to work on innovative projects, develop critical skills, and gain insights into the tech industry.</p>
+                    
+                    <h3>Expert Guidance</h3>
+                    <p>Learn from industry experts with a focus on real-world skills. Choose your preferred domain and kickstart your career with Winger IT Solutions.</p>
+                    
+                    <h3>Comprehensive Program</h3>
+                    <p>We offer a comprehensive internship program tailored for students and professionals looking to gain hands-on experience in cutting-edge technologies.</p>
+
+                    <h3>More Details</h3>
+                    <p>Click here to learn more about our company.<br><a class="button-link"href="https://www.wingerit.in/">Get in Touch now</a></p>
+                    
+                    
+                    
+                    <div class="projects-box1">
+                        <h3 class="highlighted"> Get in Touch Before Registering</h3>
+                        <p>
+                            To ensure you have all the information you need, please contact to us at +91 9035261715 before proceeding with the registration.
+                        </p>
+                    </div>
+                </div>
+                
+                <div id="right-form">
+                    <script>
+                        document.write(`
+                            <h1>Internship Application Form</h1>
+                            <form id="application-form">
+                                <div class="form-group">
+                                    <label for="first-name">First Name</label>
+                                    <input type="text" id="first-name" class="form-control" placeholder="Enter your First name">
+                                    <label for="last-name">Last Name</label>
+                                    <input type="text" id="last-name" class="form-control" placeholder="Enter your Last name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" id="email" class="form-control" placeholder="Enter your email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="text" id="phone" class="form-control" placeholder="Enter your phone number">
+                                </div>
+                                <div class="form-group">
+                                    <label for="graduation-percentage">Graduation Percentage</label>
+                                    <input type="text" id="graduation-percentage" class="form-control" placeholder="Enter your Graduation Percentage">
+                           </div>
+                                <div class="form-group">
+                                    <label for="internship-duration">Internship Duration</label>
+                                    <select id="internship-duration" class="form-control">
+                                        <option value="" disabled selected>Internship Duration</option>
+                                        <option value="1_month">1 month</option>
+                                        <option value="3_months">3 months</option>
+                                        <option value="6_months">6 months</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="preferred-domain">Preferred Internship Domain</label>
+                                    <select id="preferred-domain" class="form-control">
+                                        <option value="" disabled selected>Preferred Internship Domain</option>
+                                        <option value="ai_ml_ds">Artificial Intelligence, Machine Learning, and Data Science</option>
+                                        <option value="embedded_iot">Embedded Systems and Internet of Things (IoT)</option>
+                                        <option value="fullstack_webdev">Full Stack Web Development</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="degree-qualification">Degree Qualification</label>
+                                    <select id="degree-qualification" class="form-control">
+                                        <option value="" disabled selected>Degree Qualification</option>
+                                        <option value="btech_cs">BE/B-TECH CS</option>
+                                        <option value="btech_ec">BE/B-TECH EC</option>
+                                        <option value="btech_is">BE/B-TECH IS</option>
+                                        <option value="btech_it">BE/B-TECH IT</option>
+                                        <option value="btech_ee">BE/B-TECH EE</option>
+                                        <option value="be_btech_ae_mae">BE/B-TECH AE/MAE</option>
+                                        <option value="be_btech_au_mau">BE/B-TECH AU/MAU</option>
+                                        <option value="diploma_polytechnic">Diploma / Polytechnic</option>
+                                        <option value="mca_mtech">MCA/MTECH</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                <button type="button" onclick="save()" class="btn">Submit Application</button>
+                            </form>
+                            <script>
+                                // Your web app's Firebase configuration
+                                var firebaseConfig = {
+                                  apiKey: "AIzaSyCfES--Dt4s70Reejwa40hooIraSWDcxZQ",
+  authDomain: "winger-it-solutions.firebaseapp.com",
+  databaseURL: "https://winger-it-solutions-default-rtdb.firebaseio.com",
+  projectId: "winger-it-solutions",
+  storageBucket: "winger-it-solutions.appspot.com",
+  messagingSenderId: "1015080396608",
+  appId: "1:1015080396608:web:a3bd949026c19cb2eabca5",
+  measurementId: "G-5GSEFW5VXJ"
+
+                                };
+                                
+                                // Initialize Firebase
+                                firebase.initializeApp(firebaseConfig);
+                                var database = firebase.database();
+            
+                                // Save function
+                                function save() {
+                                    var firstName = document.getElementById('first-name').value;
+                                    var lastName = document.getElementById('last-name').value;
+                                    var email = document.getElementById('email').value;
+                                    var phone = document.getElementById('phone').value;
+                                    var graduationPercentage = document.getElementById('graduation-percentage').value;
+                                   
+                                    var internshipDuration = document.getElementById('internship-duration').value;
+                                    var preferredDomain = document.getElementById('preferred-domain').value;
+                                    var degreeQualification = document.getElementById('degree-qualification').value;
+            
+                                    // Save data to Firebase
+                                    database.ref('applications/' + email.replace('.', ',')).set({
+                                        firstName: firstName,
+                                        lastName: lastName,
+                                        email: email,
+                                        phone: phone,
+                                        graduationPercentage: graduationPercentage,
+                                       
+                                        internshipDuration: internshipDuration,
+                                        preferredDomain: preferredDomain,
+                                        degreeQualification: degreeQualification
+                                    }).then(function() {
+                                        alert('Application saved successfully!');
+                                    }).catch(function(error) {
+                                        console.error('Error saving application:', error);
+                                        alert('Failed to save application.');
+                                    });
+                                }
+                            <\/script>
+                        `);
+                    </script>
+                </div>
+
+
+
+        <div id="page2">
+            <div id="nav">
+                <!-- <div class="elem">
+                    <h1>Why Winger IT Solutions Internship?</h1>
+                   
+                </div> -->
+                <h1 style= "font-size: 30px; font-family: 'Courier New', Courier, monospace;">Why Winger IT Solutions Internship?</h1>
+            </div>
+            <hr>
+            <div class="elem heading">
+                <p>
+                    <span id=""></span>
+                    <strong>Welcome to this exciting Internship program hosted by Winger IT Solutions!</strong>
+                </p>
+                <p>
+                    We are a <strong>15-year-old company</strong> based in Bangalore, India, specializing in IT infrastructure and software solutions. Our expertise spans across various technologies, including:
+                </p>
+                <ul class="tech-list">
+                    <li>Artificial Intelligence/Machine Learning/Data Science</li>
+                    <li>Full Stack Web/Software Development</li>
+                    <li>Embedded Systems and IoT</li>
+                </ul>
+                <p>
+                    During this internship program, you will have the opportunity to learn about <strong>Futuristic Technologies</strong> such as:
+                </p>
+                <ul class="tech-list">
+                    <li>Data Science</li>
+                    <li>Artificial Intelligence</li>
+                    <li>Machine Learning</li>
+                    <li>Full Stack Web Development</li>
+                    <li>Embedded Systems</li>
+                    <li>IoT</li>
+                    <li>Robotics</li>
+                </ul>
+                <p>
+                    The program is meticulously designed by industry experts to offer you exposure to <strong>industry standard practices</strong>. Regardless of your engineering branch, you will have the chance to learn these technologies from scratch, helping you develop essential working skills, and enhancing your competitiveness in the job market.
+                </p>
+            </div>
+            
+        </div>
+     
+        <div id="page3">
+            <div id="page3-top">
+                
+                <h2>Domains</h2>
+               
+            </div>
+            <div id="page3-elements">
+                <div class="box">
+                    <img src="https://images.unsplash.com/photo-1696258686263-9f42a5e34371?q=80&w=1384&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                    <video muted autoplay playsinline loop poster="https://images.unsplash.com/photo-1696258686263-9f42a5e34371?q=80&w=1384&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+                        <source src="./videos/video1.mp4" type="video/mp4">
+                        
+                    </video>
+                    <h1 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">IoT</h1>
+                </div>
+                <div class="box">
+                    <img src="https://images.unsplash.com/photo-1516192518150-0d8fee5425e3?q=80&w=1936&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                    <video muted autoplay playsinline loop poster="https://images.unsplash.com/photo-1516192518150-0d8fee5425e3?q=80&w=1936&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+                        <source src="./videos/video2.mp4" type="video/mp4">
+                    </video>
+                 <h1 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Ai/ML</h1>
+                </div>
+                <div class="box">
+                    <img src="https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                    <video muted autoplay playsinline loop poster="https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+                        <source src="./videos/video3.mp4" type="video/mp4">
+                    </video>
+                    <h1 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Full Stack</h1>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+        <section id="curriculum" class="curriculum">
+            <h2 style="font-family: 'Courier New', Courier, monospace;">Curriculum</h2>
+            <div class="course-buttons">
+                <button class="course-btn" onclick="toggleWeeks('ai_ml_ds')">AI/ML/Data Science</button>
+                <button class="course-btn" onclick="toggleWeeks('fullstack_webdev')">Full-Stack Web Development</button>
+                <button class="course-btn" onclick="toggleWeeks('embedded_iot')">Embedded Systems & IoT</button>
+            </div>
+        
+            <div id="curriculum-table">
+                <!-- AI/ML/Data Science Weeks -->
+                <div id="ai_ml_ds" class="weeks-container">
+                    <h3>AI/ML/Data Science</h3>
+                    <div class="week">
+                        <h3>Week 1: Python Basics Mastery</h3>
+                        <ul>
+                            <li>Data Types and Variables</li>
+                            <li>Type casting</li>
+                            <li>Operators</li>
+                            <li>Input and Output</li>
+                            <li>Conditional Statements</li>
+                            <li>Looping Statement</li>
+                            <li>Functions</li>
+                            <li>File Handling</li>
+                            <li>Comprehensions</li>
+                            <li>Classes and Object</li>
+                            <li>Exception Handling</li>
+                            <li>Modules and Packages</li>
+                        </ul>
+                    </div>
+                    <div class="week">
+                        <h3>Week 2: Data Analysis with Python</h3>
+                        <ul>
+                            <li>Modules for Data Analysis</li>
+                            <li>Importing Datasets</li>
+                            <li>Data Wrangling</li>
+                            <li>Exploratory Data Analysis</li>
+                            <li>Data Visualization</li>
+                        </ul>
+                    </div>
+                    <div class="week">
+                        <h3>Week 3: Prerequisites to Start building projects</h3>
+                        <ul>
+                            <li>Supervised Learning</li>
+                            <li>Unsupervised Learning</li>
+                            <li>Reinforcement Learning</li>
+                            <li>Deep Learning</li>
+                            <li>Understanding OpenCV</li>
+                            <li>Natural Language Processing (NLP) Principles</li>
+                        </ul>
+                    </div>
+                    <div class="week">
+                        <h3>Week 4: Real-Time Project Development process</h3>
+                        <ul>
+                            <li>Requirement Analysis</li>
+                            <li>Design Phase</li>
+                            <li>Algorithm Comparison</li>
+                            <li>Implementation Phase</li>
+                            <li>Testing and Debugging Phase</li>
+                            <li>Deployment and Maintenance Phase</li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <!-- Full-Stack Web Development Weeks -->
+                <div id="fullstack_webdev" class="weeks-container">
+                    <h3>Full-Stack Web Development</h3>
+                    <div class="week">
+                        <h3>Week 1: Fundamentals of HTML, CSS, and JavaScript</h3>
+                        <ul>
+                            <li>Introduction to HTML</li>
+                            <li>Designing Frontend with CSS</li>
+                            <li>Fundamentals of JavaScript</li>
+                        </ul>
+                    </div>
+                    <div class="week">
+                        <h3>Week 2: Advanced JavaScript, Frontend Development, Introduction to DBMS and Firebase</h3>
+                        <ul>
+                            <li>JavaScript Advanced Concepts</li>
+                            <li>Frontend Frameworks and Tools</li>
+                            <li>Basic Server Setup</li>
+                            <li>DBMS Basics</li>
+                            <li>Firebase Essentials</li>
+                        </ul>
+                    </div>
+                    <div class="week">
+                        <h3>Week 3: React.js Fundamentals, Express.js, Node.js, MySQL, Full-Stack Development, and React Native</h3>
+                        <ul>
+                            <li>Introduction to React.js</li>
+                            <li>React Components and State Management</li>
+                            <li>Introduction to Node.js and Express.js</li>
+                            <li>User Authentication</li>
+                            <li>MySQL Essentials</li>
+                            <li>Full-Stack Development</li>
+                            <li>Introduction to React Native</li>
+                            <li>React Native Components and Styling</li>
+                            <li>Navigation and State Management</li>
+                        </ul>
+                    </div>
+                    <div class="week">
+                        <h3>Week 4: Real-Time Project Development Process</h3>
+                        <ul>
+                            <li>Requirement Analysis</li>
+                            <li>Design Phase</li>
+                            <li>Algorithm Comparison</li>
+                            <li>Implementation Phase</li>
+                            <li>Testing and Debugging Phase</li>
+                            <li>Deployment and Maintenance Phase</li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <!-- Embedded Systems & IoT Weeks -->
+                <div id="embedded_iot" class="weeks-container">
+                    <h3>Embedded Systems & IoT</h3>
+                    <div class="week">
+                        <h3>Week 1: Mastering C Programming</h3>
+                        <ul>
+                            <li>Compilation process in C</li>
+                            <li>Memory Layout and Scope of Variables</li>
+                            <li>Input/Output in C</li>
+                            <li>Operators in C</li>
+                            <li>Control Statements</li>
+                            <li>Functions</li>
+                            <li>Arrays</li>
+                            <li>Pointers</li>
+                            <li>Dynamic Memory Allocation</li>
+                            <li>Strings</li>
+                            <li>Structures, Unions, and Enums</li>
+                            <li>The C Preprocessor</li>
+                            <li>Bitwise Operations in C</li>
+                            <li>Multi-file Compilation</li>
+                            <li>Command Line Arguments</li>
+                        </ul>
+                    </div>
+                    <div class="week">
+                        <h3>Week 2: Prerequisites for Embedded Systems Development</h3>
+                        <ul>
+                            <li>C++ Programming Introduction - Object-Oriented Programming Concepts</li>
+                            <li>Microcontroller Basics</li>
+                            <li>Arduino Programming Simulation</li>
+                            <li>Bare Metal Programming</li>
+                        </ul>
+                    </div>
+                    <div class="week">
+                        <h3>Week 3: Advanced Embedded Systems & IoT</h3>
+                        <ul>
+                            <li>Microcontroller Internals</li>
+                            <li>Interfacing with Sensors and Actuators</li>
+                            <li>Communication Protocols (SPI, I2C, UART)</li>
+                            <li>Real-Time Operating Systems (RTOS)</li>
+                            <li>Introduction to IoT</li>
+                            <li>IoT Protocols and Communication</li>
+                            <li>Data Collection and Analysis</li>
+                        </ul>
+                    </div>
+                    <div class="week">
+                        <h3>Week 4: Real-Time Project Development Process</h3>
+                        <ul>
+                            <li>Requirement Analysis</li>
+                            <li>Design Phase</li>
+                            <li>Algorithm Comparison</li>
+                            <li>Implementation Phase</li>
+                            <li>Testing and Debugging Phase</li>
+                            <li>Deployment and Maintenance Phase</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        <div class="projects-box">
+            <p>
+               NOTE: Starting from Week 5 (Month 2), candidates will be engaged in real-time, industry-level projects. This practical experience is a key component of the curriculum, offering hands-on exposure to industry practices and aimed at enhancing professional skills.
+            </p>
+        </div>
+    
+
+
+   <!-- New Extra Benefits Section -->
+   <h1 class="add"> ADD-ONS</h1>
+   <div class="containercard">
+  
+      <div class="card">
+          <h2>1. Soft Skills Development</h2>
+          <ul>
+              <li>Communication Skills</li>
+              <li>Teamwork</li>
+              <li>Problem-Solving</li>
+              <li>Presentation Skills</li>
+          </ul>
+      </div>
+      <div class="card">
+          <h2>2. Corporate Training</h2>
+          <ul>
+              <li>Industry-Specific Knowledge</li>
+              <li>Professional Etiquette</li>
+              <li>Role-Specific Training</li>
+              <li>Compliance and Ethics</li>
+          </ul>
+      </div>
+      <div class="card">
+          <h2>3. Interview Preparation</h2>
+          <ul>
+              <li>Mock Interviews</li>
+              <li>Behavioral Questions</li>
+              <li>Technical Questions</li>
+              <li>Interview Etiquette</li>
+          </ul>
+      </div>
+      <div class="card">
+          <h2>4. Resume Building</h2>
+          <ul>
+              <li>Tailored Resumes</li>
+              <li>Formatting and Presentation</li>
+              <li>Keyword Optimization</li>
+              <li>Achievement-Focused Content</li>
+          </ul>
+      </div>
+      <div class="card">
+          <h2>5. Career Guidance</h2>
+          <ul>
+              <li>Career Path Exploration</li>
+              <li>Goal Setting</li>
+              <li>Mentorship</li>
+              <li>Job Market Insights</li>
+          </ul>
+      </div>
+      <div class="card">
+          <h2>6. Internship Completion Certificates</h2>
+          <ul>
+              <li>Certification of Achievement</li>
+              <li>Skill Validation</li>
+              <li>Employer Recognition</li>
+              <li>Portfolio Enhancement</li>
+          </ul>
+      </div>
+  </div>
+
+
+
+  <div id="logos-container" class="logos-container">
+    <a><img src="images/python.png" alt="Python Logo"></a>
+    <a><img src="images/Java.png" alt="Java Logo"></a>
+    <a><img src="images/C.png" alt="C Programming Logo"></a>
+    <a><img src="images/C++.png" alt="C++ Logo"></a>
+    <a><img src="images/HTML.png" alt="HTML Logo"></a>
+    <a><img src="images/CSS.png" alt="CSS Logo"></a>
+    <a><img src="images/JavaScript.png" alt="JavaScript Logo"></a>
+    <a><img src="images/reactnative.png" alt="React Native Logo"></a>
+    <a><img src="images/SQL.png" alt="SQL Logo"></a>
+    <a><img src="images/angular.png" alt="React.js Logo"></a>
+    <a><img src="images/firebase.png" alt="Firebase Logo"></a>
+    <a><img src="images/nodejs.png" alt="Node.js Logo"></a>
+    <a><img src="images/expressjs.png" alt="Express.js Logo"></a>
+    <a><img src="images/bootstrap.png" alt="Bootstrap Logo"></a>
+    <a><img src="images/github.png" alt="GitHub Logo"></a>
+ </div>
+
+
+ <footer id="contact" class="footer">
+    <div class="footer-content">
+        <div class="footer-left">
+            <p>&copy; 2024 Winger IT Solutions. All rights reserved.</p>
+            <p>Address: #669 D, 2nd Block, HBR layout, Bangalore,karnataka</p>
+            <p>Website: www.wingerit.in</p>
+            <p>Phone: +91 90352 61715</p>
+            
+        </div>
+    </div>
+</footer>
+
+
+
+  
+
+
+        
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js" integrity="sha512-7Au1ULjlT8PP1Ygs6mDZh9NuQD0A5prSrAUiPHMXpU6g3UMd8qesVnhug5X4RoDr35x5upNpx0A6Sisz1LSTXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/ScrollTrigger.min.js" integrity="sha512-LQQDtPAueBcmGXKdOBcMkrhrtqM7xR2bVrnMtYZ8ImAZhFlIb5xrMqQ6uZviyeSB+4mYj89ta8niiCIQM1Gj0w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js"></script>
+  
+
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+    <script src="script.js"></script>
+    <!-- Firebase App (the core Firebase SDK) -->
+<!-- Firebase SDK -->
