@@ -150,7 +150,7 @@ nav h4 {
 
 /* Heading Styles */
 #form-container h1 {
-    font-family: rejouice;
+    font-family:'Courier New', Courier, monospace;
     font-size: 4vw;
     color: #0E0E0E;
     text-align: center;
@@ -210,7 +210,7 @@ nav h4 {
 }
 
 #left-content h2 {
-    font-family: rejouice;
+    font-family:'Courier New', Courier, monospace;
     font-size: 2vw;
     color: #0E0E0E;
     margin-bottom: 1vw;
@@ -238,7 +238,7 @@ nav h4 {
 }
 
 #left-content h2 {
-    font-family: rejouice;
+    font-family:'Courier New', Courier, monospace;
     font-size: 2vw;
     color: #0E0E0E;
     margin-bottom: 1.5vw;
@@ -511,7 +511,7 @@ ul li {
     #page3 {
         padding: 8vw 4vw; /* Maintain increased top padding for smaller screens */
         margin-bottom: 300px; /* Ensure ample space between sections */
-        margin-top: -48vh; /* Adjusted margin for better spacing */
+        margin-top: -55vh; /* Adjusted margin for better spacing */
     }
 
     #page3-top h4 {
